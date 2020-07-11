@@ -93,6 +93,7 @@ header .profile-image:hover {
   color: #e93a17;
 }
 .card {
+  line-height: 1.5em;
   margin: 150px 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
@@ -127,7 +128,7 @@ ul.skills {
 footer {
   width: 100%;
   min-height: 30px;
-  padding: 20px 0 40px 20px;
+  padding: 20px 0 40px 0;
 }
 
 footer .copyright {
@@ -177,12 +178,15 @@ a.social:hover {
     max-width: 1200px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 auto;
   }
 
-  /* header {
-    min-height: 470px;
-  } */
+  .card {
+    max-width: 45%;
+    margin: 7em 0 0 0;
+  }
 
   .nav {
     max-width: 1200px;
@@ -201,7 +205,7 @@ a.social:hover {
   footer {
     font-size: 1.3em;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 80px auto;
   }
 }
 
