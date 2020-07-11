@@ -1,13 +1,13 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #222;
   background: #f7f5f0;
 }
@@ -15,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #999;
+  color: rgb(83, 83, 83);
 }
 a:hover {
   color: #6633ff;
@@ -35,71 +35,74 @@ a:hover {
   display: flex;
   justify-content: space-around;
   font-weight: 700;
+  font-size: 1.5rem;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
 }
 
 .nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
+  display: block;
+  margin-right: auto;
+  color: white;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
 }
 .nav a {
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .nav a:hover {
-  color: white
+  color: #e93a17;
 }
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url("images/background.jpg") no-repeat center center;
   background-size: cover;
   overflow: hidden;
-  padding-top: 60px;
+  padding: 30vh 0;
+  height: 100vh;
 }
 header {
   line-height: 1.5;
 }
 header .profile-image {
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
+  margin-bottom: 20px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  border: 3px solid white;
-  transition: all .5s;
+  border: 1px solid rgb(230, 217, 205);
+  padding: 10px;
+  transition: all 0.5s;
+  background: rgb(230, 217, 205);
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(-10deg);
 }
 .tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
+  background-color: #e93a17;
+  color: #98dfe9;
+  padding: 0.25em 0.75em;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+}
 .location {
-  background-color: #222;
-  color: yellow;
+  background-color: #98dfe9;
+  color: #e93a17;
 }
 .card {
-  margin: 30px;
+  margin: 150px 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
-  background: #fff;
-  border-bottom: 4px solid #ccc;
-  border-radius: 6px;
-  transition: all .5s;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  transition: all 0.5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: #e93a17;
 }
 
 ul.skills {
@@ -110,14 +113,15 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
-  color: white;
+  background: #e93a17;
+  color: #98dfe9;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: #98dfe9;
+  color: #e93a17;
 }
 
 footer {
@@ -128,7 +132,7 @@ footer {
 
 footer .copyright {
   top: -8px;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 footer ul {
@@ -148,12 +152,10 @@ a.social {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s;
+  opacity: 0.4;
+  transition: all 0.5s;
 }
-a.twitter {
-  background-image: url(images/twitter.svg);
-}
+
 a.linkedin {
   background-image: url(images/linkedin.svg);
 }
@@ -169,25 +171,24 @@ a.social:hover {
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
   .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
   }
 
-  header {
+  /* header {
     min-height: 470px;
-  }
+  } */
 
   .nav {
     max-width: 1200px;
     padding: 0 30px;
+    font-size: 2rem;
   }
-
 
   main {
     padding-top: 20px;
@@ -202,6 +203,51 @@ a.social:hover {
     max-width: 1200px;
     margin: 40px auto;
   }
-
 }
 
+/* Travel page styles */
+#header-travel {
+  height: 30vh;
+  background: linear-gradient(20deg, #f5714f, #85c5cb 60%);
+  padding: 17vh 0;
+}
+
+#header-travel h1 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: auto 3rem;
+  color: rgba(0, 0, 0, 0.692);
+}
+
+.gallery {
+  padding: 5em 0 3em;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  padding-top: 1em;
+  font-style: italic;
+}
+
+@media screen and (min-width: 720px) {
+  .gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .gallery {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+
+  figure {
+    margin: 1em;
+  }
+}
