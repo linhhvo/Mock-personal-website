@@ -35,7 +35,7 @@ a:hover {
   display: flex;
   justify-content: space-around;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
@@ -205,20 +205,38 @@ a.social:hover {
   }
 }
 
-/* Travel page styles */
-#header-travel {
+/* Resume page styles */
+
+#header-others {
   height: 30vh;
   background: linear-gradient(20deg, #f5714f, #85c5cb 60%);
   padding: 17vh 0;
 }
 
-#header-travel h1 {
+#header-others h1 {
   display: flex;
   align-content: center;
   justify-content: center;
+  font-size: 40px;
   margin: auto 3rem;
   color: rgba(0, 0, 0, 0.692);
 }
+
+.resume {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 3em 0 3em;
+  text-align: left;
+}
+
+.resume ul {
+  list-style-type: none;
+}
+
+.prof-exp {
+  margin-top: 3em;
+}
+/* Travel page styles */
 
 .gallery {
   padding: 5em 0 3em;
@@ -249,5 +267,20 @@ figcaption {
 
   figure {
     margin: 1em;
+  }
+
+  .resume {
+    display: flex;
+    justify-content: center;
+  }
+
+  .education {
+    border-right: solid 1px;
+    padding-right: 2.25em;
+  }
+
+  .prof-exp {
+    padding-left: 2.25em;
+    margin: unset;
   }
 }
