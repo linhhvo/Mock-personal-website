@@ -1,2 +1,2 @@
-# techdegree-project-1
- Teamtreehouse techdegree project for unit 1: personal portfolio
+# Mock Personal Website
+ Customize a personal portfolio page to practice web design skills
